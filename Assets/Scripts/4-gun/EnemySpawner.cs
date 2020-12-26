@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject enemySpawne;
-
+   // [SerializeField] GameObject muzzleFlash;
     [SerializeField] Terrain terrain;
     [SerializeField] float yOffset = 0.5f;
     [SerializeField] float numberOfEnemies = 5f;
@@ -63,6 +63,8 @@ public class EnemySpawner : MonoBehaviour
           //  Enemy t = enemySpawne.GetComponent<Enemy>();
            
             GameObject objInstance = (GameObject)Instantiate(enemySpawne, new Vector3(randX, yVal, randZ), Quaternion.identity);
+           // GameObject flameInstance = (GameObject)Instantiate(muzzleFlash, new Vector3(randX, yVal, randZ), Quaternion.identity);
+
         }
     }
 }

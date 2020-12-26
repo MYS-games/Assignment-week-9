@@ -813,6 +813,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3105565401074065501, guid: 6fee9a214cbc4c140b6662b12e44a993,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4001412910802413081, guid: 6fee9a214cbc4c140b6662b12e44a993,
         type: 3}
       propertyPath: m_Name
@@ -913,6 +918,11 @@ PrefabInstance:
       propertyPath: maxWaitAtTarget
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4001412910802510017, guid: 6fee9a214cbc4c140b6662b12e44a993,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4001412910802510019, guid: 6fee9a214cbc4c140b6662b12e44a993,
         type: 3}
       propertyPath: player
@@ -976,6 +986,11 @@ PrefabInstance:
     - target: {fileID: 4001412910802647673, guid: 6fee9a214cbc4c140b6662b12e44a993,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106564004288911648, guid: 6fee9a214cbc4c140b6662b12e44a993,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

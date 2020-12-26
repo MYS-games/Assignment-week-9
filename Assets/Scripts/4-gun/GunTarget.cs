@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GunTarget : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class GunTarget : MonoBehaviour
 
     void die()
     {
+        if (gameObject.tag  == "Player")
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentSceneName);
+        }
         Destroy(gameObject);
     }
 }
