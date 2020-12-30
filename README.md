@@ -1,22 +1,26 @@
-# Unity week 6: Three-dimensional scene-building and navigation
+# Assignment-9
 
-A project with step-by-step scenes illustrating how to construct a 3D game, including:
+* Shir Avraham
+* Yuval Zarbiv
+* Matti Stern
 
-* Scene modelling with Terrain Tools and ProGrids;
-* Player control with CharacterController and NavMeshAgent;
-* Enemy AI;
-* Target visualization with gizmmos.
+On this part the section we chose is A.2. from the AI file:
+We change the game to be a FPS game, and added a weapon to the player.
 
-## Credits
+We added 4 scripts:
+* [Gun](https://github.com/MYS-games/Assignment-week-9/blob/master/Assets/Scripts/4-gun/Gun.cs.meta)
+* [GunTarget](https://github.com/MYS-games/Assignment-week-9/blob/master/Assets/Scripts/4-gun/GunTarget.cs)
+* [EnemyRange](https://github.com/MYS-games/Assignment-week-9/blob/master/Assets/Scripts/4-gun/EnemyRange.cs)
+* [EnemySpawner](https://github.com/MYS-games/Assignment-week-9/blob/master/Assets/Scripts/4-gun/EnemySpawner.cs)
 
-Programming:
-* Michael Lemberger
-* Erel Segal-Halevi
+**Gun script -**
+The gun script handle the player shoot, using raycast and partical system effects.
 
-Graphics:
-* [Sci-Fi Gun Light](https://assetstore.unity.com/packages/3d/props/guns/sci-fi-gun-light-87916)
-* [Sci-Fi Styled Modular Pack](https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-styled-modular-pack-82913)
-* [Toon Soldiers Demo](https://assetstore.unity.com/packages/3d/characters/toon-soldiers-demo-69684)
+**GunTarget script -**
+The gun Target script handle the enemy (same for the player / engine) hits and update it's life points.
 
-Online course:
-* [Unity RPG](https://www.gamedev.tv/p/unity-rpg/?product_id=1503859&coupon_code=JOINUS).
+**EnemyRange script -**
+The EnemyRange script checks if the player or the engine is in the enemy chase or shoot range, if the player is closer than the engine the enemy attack the player otherwise - attack the engine.
+
+**EnemySpawner script -**
+The Enemy Spawner script handle the Spawn of the enemies on the map, if the enemy number below 5 the spawner spawn new enemy (enemy number = 5).
