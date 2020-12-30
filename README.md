@@ -24,3 +24,5 @@ The EnemyRange script checks if the player or the engine is in the enemy chase o
 
 **EnemySpawner script -**
 The Enemy Spawner script handle the Spawn of the enemies on the map, if the enemy number below 5 the spawner spawn new enemy (enemy number = 5).
+
+Play on Itch : https://mattistern.itch.io/enemy-assignment9
