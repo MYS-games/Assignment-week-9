@@ -12,7 +12,7 @@ public class EnemyRange : MonoBehaviour
 {
 
     private Transform target;
-
+    private Transform target2;
     private NavMeshAgent navMeshAgent;
     [SerializeField] private float MovementSpeed = 10f;
 
@@ -32,6 +32,7 @@ public class EnemyRange : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
+        target2= GameObject.FindGameObjectsWithTag("Engine")[0].transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
@@ -40,17 +41,32 @@ public class EnemyRange : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-
-
-        if (distance <= enemyChaseRange)
+        float distance2 = Vector3.Distance(target2.position, transform.position);
+        if(distance < distance2)
         {
-            if (distance <= enemyshootRange)
+            if (distance <= enemyChaseRange)
             {
-                this.StartCoroutine(shoot());
+                if (distance <= enemyshootRange)
+                {
+                    this.StartCoroutine(shoot());
 
+                }
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position), rotationSpeed * Time.deltaTime);
+                transform.position += transform.forward * MovementSpeed * Time.deltaTime;
             }
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position), rotationSpeed * Time.deltaTime);
-            transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+        }
+        else
+        {
+            if (distance2 <= enemyChaseRange)
+            {
+                if (distance2 <= enemyshootRange)
+                {
+                    this.StartCoroutine(shoot());
+
+                }
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target2.position - transform.position), rotationSpeed * Time.deltaTime);
+                transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+            }
         }
         
        

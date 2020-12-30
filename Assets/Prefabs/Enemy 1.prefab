@@ -505,6 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyLife: 50
+  health: {fileID: 0}
 --- !u!114 &9106564004288911648
 MonoBehaviour:
   m_ObjectHideFlags: 0
